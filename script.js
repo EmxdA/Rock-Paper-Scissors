@@ -1,3 +1,22 @@
+const playBtn = document.querySelector(".playBtn");
+const siteHeading = document.querySelector(".mainHeading");
+const gameDiv = document.querySelector("#gameContainer");
+const body = document.querySelector('body');
+const desc = document.createElement("h3");
+
+desc.textContent = "10 Rounds, 3 Moves, Don't Lose!"
+desc.setAttribute('style', 'text-align: center; font-size: 28px; color: #BFC0C0')
+
+playBtn.addEventListener('click', () => {
+    playBtn.setAttribute('style', 'visibility: hidden;');
+    siteHeading.setAttribute('style', 'font-size: 40px; margin:0; padding: 30px 0; background-color: #1f222e; transition: all .5s linear;');
+    gameDiv.appendChild(desc);
+})
+
+
+
+
+
 const choicesArray = ["rock", "paper", "scissors"];
 let playerScore = 0, computerScore = 0;
 
@@ -29,21 +48,21 @@ let playGame = (playerSelection, computerSelection) => {
     }
 }
 
-let game = () => {
-    let playerSelection, computerSelection;
-    for (let i = 0; i < 5; i++){
-        playerSelection = prompt("Enter Rock, Paper or Scissors");
-        computerSelection = getComputerChoice();
-        console.log(playGame(playerSelection, computerSelection));
-    }
-    if(playerScore > computerScore)
-    {
-        console.log("You Won!");
-    }
-    else {
-        console.log("you lost!");
-    }
-}
+// let game = () => {
+//     let playerSelection, computerSelection;
+//     for (let i = 0; i < 5; i++){
+//         playerSelection = prompt("Enter Rock, Paper or Scissors");
+//         computerSelection = getComputerChoice();
+//         console.log(playGame(playerSelection, computerSelection));
+//     }
+//     if(playerScore > computerScore)
+//     {
+//         console.log("You Won!");
+//     }
+//     else {
+//         console.log("you lost!");
+//     }
+// }
 
 
 game();

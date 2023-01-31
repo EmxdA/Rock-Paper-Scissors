@@ -79,7 +79,7 @@ playAgainBtn.addEventListener("click", () => {
 
 let playRound = (playerSelection, computerSelection) => {
   if (playerSelection == computerSelection) {
-    string = "Draw || Both players played the same move!";
+    eventBoard.textContent = "Draw || Both players played the same move!";
   } else {
     if (
       (playerSelection == "rock" && computerSelection == "scissors") ||
